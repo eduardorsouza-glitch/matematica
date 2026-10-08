@@ -1,0 +1,22 @@
+body {
+    background-color: #f1f3f8;
+}
+
+h1 {
+    color: #2b3a67;
+    font-size: 2rem;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+textarea {
+    font-family: monospace;
+}
+
+table td {
+    min-width: 60px;
+}

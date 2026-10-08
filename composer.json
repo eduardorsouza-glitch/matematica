@@ -1,6 +1,19 @@
 {
+    "name": "senai/algebra-linear",
+    "description": "Aplicação web em PHP com algoritmos de álgebra linear (matrizes e sistemas lineares) validados com PHPUnit",
+    "type": "project",
+    "keywords": ["algebra-linear", "matrizes", "sistemas-lineares", "phpunit"],
+    "license": "proprietary",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=8.4"
+    },
     "require-dev": {
         "phpunit/phpunit": "^11.0"
+    },
+    "suggest": {
+        "ext-xdebug": "Necessário para gerar o relatório de cobertura de testes"
     },
     "autoload": {
         "psr-4": {
@@ -11,5 +24,20 @@
         "psr-4": {
             "Tests\\": "tests/"
         }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "scripts": {
+        "test": "phpunit",
+        "coverage": [
+            "@putenv XDEBUG_MODE=coverage",
+            "phpunit --coverage-html coverage --coverage-text"
+        ]
+    },
+    "scripts-descriptions": {
+        "test": "Roda a suíte de testes unitários",
+        "coverage": "Roda os testes e gera o relatório de cobertura em coverage/"
     }
 }
